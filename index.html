@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crowd Detection | Dharan Kumar P</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a2e);
+      font-family: 'Segoe UI', sans-serif;
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      color: #ffffff;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(30, 144, 255, 0.4);
+    }
+
+    .header p {
+      font-size: 16px;
+      color: #a0a0a0;
+      margin-top: 10px;
+      font-weight: 400;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 40px;
+      width: 100%;
+      max-width: 460px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      animation: slideUp 1s ease;
+      text-align: center;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #1e90ff;
+      text-shadow: 0 0 8px rgba(30,144,255,0.3);
+    }
+
+    .card input[type="file"] {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #1e90ff;
+      background-color: transparent;
+      color: #ffffff;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+
+    .card input[type="file"]:hover {
+      background: rgba(30, 144, 255, 0.1);
+    }
+
+    .card input[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      background: #1e90ff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #1e90ff;
+      transition: all 0.3s ease;
+    }
+
+    .card input[type="submit"]:hover {
+      background-color: #0f75d4;
+      transform: scale(1.02);
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #777;
+      text-align: center;
+    }
+
+    .footer span {
+      color: #1e90ff;
+      font-weight: 500;
+    }
+
+    @media (max-width: 500px) {
+      .header h1 {
+        font-size: 28px;
+      }
+
+      .card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>DHARAN KUMAR P</h1>
+    <p>Real-Time Crowd Detection and Monitoring System using Machine Learning</p>
+  </div>
+
+  <div class="card">
+    <h2>🎥 Upload Video for Detection</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="video" accept="video/*" required>
+      <input type="submit" value="Start Analysis">
+    </form>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 <span>Dharan Kumar</span>. All Rights Reserved.
+  </div>
+
+</body>
+</html>
